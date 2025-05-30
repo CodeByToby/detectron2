@@ -691,7 +691,7 @@ class TorchMemoryStats(HookBase):
                 torch.cuda.reset_peak_memory_stats()
 
 
-class PerdiodicProgressPrinter(HookBase):
+class PeriodicProgressPrinter(HookBase):
     """
     Print iteration number in stdin after a certain period.
     """
