@@ -494,7 +494,7 @@ class DefaultTrainer(TrainerBase):
         ret.append(hooks.EvalHook(cfg.TEST.EVAL_PERIOD, test_and_save_results))
 
         # Build the custom hook
-        ret.append(hooks.PeriodicProgressPrinter(period=1))
+        #ret.append(hooks.PeriodicProgressPrinter(period=1))
 
         if comm.is_main_process():
             # Here the default print/log frequency of each writer is used.
