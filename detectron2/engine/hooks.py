@@ -689,16 +689,3 @@ class TorchMemoryStats(HookBase):
                     self._logger.info("\n" + mem_summary)
 
                 torch.cuda.reset_peak_memory_stats()
-
-
-# class PeriodicProgressPrinter(HookBase):
-#     """
-#     Print iteration number in stdin after a certain period.
-#     """
-
-#     def __init__(self, period):
-#         self._period = period
-
-#     def after_step(self):
-#         if self.trainer.iter % self._period == 0:
-#             print(f"[{self.trainer.iter}/{self.trainer.max_iter}] Training...")

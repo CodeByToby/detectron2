@@ -84,7 +84,6 @@ def do_train(args, cfg):
     trainer.register_hooks(
         [
             hooks.IterationTimer(),
-            #hooks.PeriodicProgressPrinter(1),
             hooks.LRScheduler(scheduler=instantiate(cfg.lr_multiplier)),
             (
                 hooks.PeriodicCheckpointer(checkpointer, **cfg.train.checkpointer)
